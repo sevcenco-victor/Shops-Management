@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Backgrounds\loginBackground.jpg" />
+    <None Remove="Assets\Icons\analytics.png" />
+    <None Remove="Assets\Icons\analyticsActive.png" />
+    <None Remove="Assets\Icons\bag.png" />
+    <None Remove="Assets\Icons\bagActive.png" />
+    <None Remove="Assets\Icons\bell.png" />
+    <None Remove="Assets\Icons\dashboard.png" />
+    <None Remove="Assets\Icons\dashboardActive.png" />
+    <None Remove="Assets\Icons\favicon.ico" />
+    <None Remove="Assets\Icons\logo.png" />
+    <None Remove="Assets\Icons\logout.png" />
+    <None Remove="Assets\Icons\logoutActive.png" />
+    <None Remove="Assets\Icons\search.png" />
+    <None Remove="Assets\Icons\searchActive.png" />
+    <None Remove="Assets\Icons\settings.png" />
+    <None Remove="Assets\Icons\settingsActive.png" />
+    <None Remove="Assets\Icons\shop.png" />
+    <None Remove="Assets\Icons\shopActive.png" />
+    <None Remove="Assets\Icons\word.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\searchactive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\word.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Backgrounds\loginBackground.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\bell.png" />
+    <Resource Include="Assets\Icons\favicon.ico" />
+    <Resource Include="Assets\Icons\logoutActive.png" />
+    <Resource Include="Assets\Icons\logout.png" />
+    <Resource Include="Assets\Icons\search.png" />
+    <Resource Include="Assets\Icons\settings.png" />
+    <Resource Include="Assets\Icons\settingsActive.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.2" />
+    <PackageReference Include="FamFamFam.Flags.Wpf" Version="1.2.1" />
+    <PackageReference Include="LiveCharts.Wpf.NetCore3" Version="0.9.8" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.ApplicationServices\Shop.ApplicationServices.csproj" />
+    <ProjectReference Include="..\Shop.Domain\Shop.Domain.csproj" />
+    <ProjectReference Include="..\Shop.Infrastructure\Shop.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Roboto.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\analytics.png" />
+    <Resource Include="Assets\Icons\analyticsActive.png" />
+    <Resource Include="Assets\Icons\bag.png" />
+    <Resource Include="Assets\Icons\bagActive.png" />
+    <Resource Include="Assets\Icons\dashboard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\dashboardActive.png" />
+    <Resource Include="Assets\Icons\shop.png" />
+    <Resource Include="Assets\Icons\shopActive.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Videos\" />
+  </ItemGroup>
+
+</Project>

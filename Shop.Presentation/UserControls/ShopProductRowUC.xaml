@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Shop.Presentation.UserControls.ShopProductRowUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Shop.Presentation.UserControls"
+             mc:Ignorable="d">
+    <Border BorderThickness="0  0 0 1"
+            Padding="0 12"
+            BorderBrush="{StaticResource gray}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       FontSize="16"
+                       FontWeight="Bold"
+                       TextAlignment="Left"
+                       Text="{Binding ProdName}" />
+            <TextBlock Grid.Column="1"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       Text="{Binding ProdQty}" />
+        </Grid>
+    </Border>
+</UserControl>

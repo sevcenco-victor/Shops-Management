@@ -1,0 +1,49 @@
+﻿<Window x:Class="Shop.Presentation.Pages.ProductAveragePriceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop.Presentation.Pages"
+        mc:Ignorable="d"
+        Title="ProductAveragePrice"
+        Icon="/Assets/Icons/favicon.ico"
+        Height="340"
+        Width="302">
+    <Border Padding="24 16">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition  Height="auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+            <StackPanel>
+                <TextBlock FontWeight="Bold"
+                           FontSize="16"
+                           TextWrapping="Wrap"
+                           Text="Select a product to identify it's Average price." />
+                <TextBox Grid.Row="1"
+                         x:Name="textBox"
+                         Margin="0 8 0 0"
+                         Width="240"
+                         HorizontalAlignment="Left"
+                         Style="{StaticResource CustomTextBoxStyle}"
+                         TextChanged="TextBox_TextChanged" />
+            </StackPanel>
+            <ComboBox   x:Name="productComboBox"
+                        Style="{StaticResource ComboBoxStyle1}"
+                        Margin="0 12 0 0"
+                        VerticalAlignment="Bottom"
+                        SelectionChanged="productComboBox_SelectionChanged" />
+            </StackPanel>
+            <TextBlock x:Name="productAvgPrice"
+                       Grid.Row="3"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource blue}"
+                       FontSize="24"
+                       Margin="0 24 0 0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+        </Grid>
+    </Border>
+
+</Window>

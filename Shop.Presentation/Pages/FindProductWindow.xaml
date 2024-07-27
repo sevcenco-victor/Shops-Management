@@ -1,0 +1,51 @@
+﻿<Window x:Class="Shop.Presentation.Pages.FindProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop.Presentation.Pages"
+        mc:Ignorable="d"
+        Title="FindProductWindow"
+        Icon="/Assets/Icons/favicon.ico"
+        Height="450"
+        Width="680">
+    <Border Padding="48 24">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"
+                        HorizontalAlignment="Stretch">
+                <TextBlock Text="Insert product name to identify it's shop accessibility"
+                           TextWrapping="Wrap"
+                           FontSize="18"
+                           FontWeight="bold" />
+                <TextBox  Style="{StaticResource CustomTextBoxStyle}"
+                          x:Name="productName"
+                          FontWeight="Medium"
+                          Margin="0 16 0 0"
+                          TextChanged="productName_TextChanged"/>
+            </StackPanel>
+            <DataGrid x:Name="dataGrid"
+                      Grid.Row="1"
+                      Width="auto"
+                      AutoGenerateColumns="False"
+                      CanUserDeleteRows="False"
+                      CanUserResizeColumns="False"
+                      Margin="0 48 0 0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+                                        Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Address"
+                                        Binding="{Binding Address}" />
+                    <DataGridTextColumn Header="City"
+                                        Binding="{Binding City}" />
+                    <DataGridTextColumn Header="Country"
+                                        Binding="{Binding Country}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Border>
+</Window>

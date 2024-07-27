@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Shop.Presentation.UserControls.RevenueBadgeUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Shop.Presentation.UserControls"
+             mc:Ignorable="d">
+
+    <Border Padding="12 14"
+            BorderThickness="1"
+            Height="auto"
+            Background="white"
+            BorderBrush="{StaticResource lightGray}"
+            CornerRadius="8">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition  Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="monthlyRevenueTextBlock"
+                           Grid.Column="0"
+                           FontSize="12"
+                           Foreground="{StaticResource gray}"
+                           Text="{Binding RevenueType}" />
+                <Button Background="Transparent"
+                        Grid.Column="1"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Padding="0 -12 0 0"
+                        Margin="16 0 0 0"
+                        Width="24"
+                        FontSize="20"
+                        Foreground="{StaticResource gray}"
+                        BorderBrush="{x:Null}"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Click="Button_Click"
+                        FontFamily="{StaticResource Roboto}">...</Button>
+            </Grid>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8">
+                <TextBlock FontWeight="Bold"
+                           FontSize="20"
+                           Text="{Binding CurrentRevenue}" />
+
+                <local:BadgeUC BadgeText="{Binding BadgeText}"
+                               Foreground="{Binding BadgeForeground}"
+                               BadgeColor="{Binding BadgeForeground}"
+                               Margin="16 0 0 0" />
+
+            </StackPanel>
+            <TextBlock FontSize="12"
+                       Foreground="{StaticResource gray}"
+                       Text="{Binding LastRevenue}" />
+        </StackPanel>
+    </Border>
+</UserControl>

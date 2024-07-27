@@ -1,0 +1,171 @@
+﻿<Window x:Class="Shop.Presentation.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="RegisterWindow"
+        Icon="/Assets/Icons/favicon.ico"
+        WindowStartupLocation="CenterScreen"
+        Height="640"
+        Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="1*" />
+            <ColumnDefinition Width="2.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Image Source="Assets/Backgrounds/loginBackground.jpg"
+                   Stretch="UniformToFill" />
+
+            <StackPanel Margin="48 36">
+                <Image Source="/Assets/Icons/favicon.ico"
+                       Width="32"
+                       HorizontalAlignment="Left" />
+                <TextBlock FontSize="48"
+                           Margin="0 100 0 0"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           Text="Begin your journey with us !" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1"
+              Margin="48"
+              Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto" />
+                <RowDefinition  Height="auto" />
+                <RowDefinition  Height="auto" />
+            </Grid.RowDefinitions>
+            <!--#region Header-->
+
+            <StackPanel Grid.Row="0"
+                        Grid.ColumnSpan="2">
+                <TextBlock Text="Register"
+                           FontSize="34"
+                           FontWeight="Bold" />
+                <TextBlock Foreground="{StaticResource gray}"
+                           Text="Welcome back! Please login to your account."
+                           TextWrapping="Wrap"
+                           Margin="0 12 0 0" />
+            </StackPanel>
+
+            <!--#endregion-->
+            <!--#region Col 1-->
+
+            <Grid Grid.Row="1"
+                  Grid.Column="0" Margin="0 36 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="0">
+                    <TextBlock FontSize="14"
+                               Text="Icon" />
+                    <Button Style="{StaticResource CustomButtonStyle}"
+                            Padding="14 12"
+                            Background="Transparent"
+                            Margin="0 12 0 0"
+                            Content="Uplaod an Image"
+                            Click="UploadImage_Click" />
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Margin="0 24 0 0"
+                            Grid.Column="0">
+                    <TextBlock FontSize="14"
+                               Text="User Name" />
+                    <TextBox x:Name="userName"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Padding="14 12"
+                             Margin="0 12 0 0" MaxLength="100"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2"
+                            Margin="0 24 0 0">
+                    <TextBlock FontSize="14"
+                               Text="Email" />
+                    <TextBox x:Name="userEmail"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Padding="14 12"
+                             Margin="0 12 0 0" MaxLength="100" />
+                </StackPanel>
+            </Grid>
+
+            <!--#endregion-->
+
+            <!--#region Col 2-->
+
+            <Grid Grid.Column="1"
+                  Grid.Row="1"
+                  Margin="48 36 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="auto" />
+                    <RowDefinition  Height="auto" />
+                    <RowDefinition  Height="auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0"
+                            Grid.Column="0">
+                    <TextBlock FontSize="14"
+                               Text="Password" />
+                    <PasswordBox x:Name="userPassowrd"
+                                 Padding="14 12"
+                                 Margin="0 12 0 0"
+                                 MaxLength="255" />
+                </StackPanel>
+                <StackPanel Grid.Row="1"
+                            Margin="0 24 0 0"
+                            Grid.Column="0">
+                    <TextBlock FontSize="14"
+                               Text="Repeat Password" />
+                    <PasswordBox x:Name="userRepeatPassowrd"
+                                 Padding="14 12"
+                                 Margin="0 12 0 0"
+                                 MaxLength="255" />
+                </StackPanel>
+                <StackPanel Grid.Row="2"
+                            Margin="0 24 0 0"
+                            Grid.Column="0">
+                    <TextBlock FontSize="14"
+                               Text="Role" />
+                    <TextBox x:Name="userRole"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Padding="14 12"
+                             Margin="0 12 0 0" MaxLength="50"/>
+                </StackPanel>
+
+            </Grid>
+            <!--#endregion-->
+
+            <StackPanel Grid.Row="3"
+                        Grid.ColumnSpan="2">
+                <Button Padding="0 17"
+                        Margin="0 36 0 0"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Foreground="White"
+                        Background="{StaticResource blue}"
+                        FontSize="16"
+                        BorderThickness="0"
+                        Content="Register"
+                        Click="Regiser_Click" />
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 24 0 0">
+                    <TextBlock Text="Already have an account ?" />
+                    <TextBlock Text="Login"
+                               Style="{StaticResource HoverUnderlineTextBlockStyle}"
+                               MouseLeftButtonDown="Login_Click"
+                               Margin="12 0 0 0"
+                               Foreground="{StaticResource blue}" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

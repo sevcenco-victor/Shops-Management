@@ -1,0 +1,127 @@
+﻿<Page x:Class="Shop.Presentation.Pages.AddNewShopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Shop.Presentation.Pages"
+      xmlns:UC="clr-namespace:Shop.Presentation.UserControls"
+      mc:Ignorable="d"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Title="AddNewShopPage">
+
+    <Grid x:Name="pageGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="1" Margin="0 48 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="280" />
+                <ColumnDefinition MaxWidth="280" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <StackPanel>
+                    <TextBlock Text="Image"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <Button Background="Transparent"
+                            Padding="24 12"
+                            BorderThickness="1"
+                            HorizontalAlignment="Left"
+                            Margin="0 8 0 0"
+                            Content="Click To Pick An Image"
+                            Style="{StaticResource CustomButtonStyle}"
+                            Click="AddShopImage_Click">
+                    </Button>
+                </StackPanel>
+                <StackPanel Margin="0 24 0 0">
+                    <TextBlock Text="Name"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <TextBox x:Name="shopName"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Margin="0 8 0 0" />
+                </StackPanel>
+                <StackPanel Margin="0 24 0 0">
+                    <TextBlock Text="Address"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <TextBox x:Name="shopAddress"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Margin="0 8 0 0" />
+                </StackPanel>
+                <StackPanel Margin="0 24 0 0">
+                    <TextBlock Text="City"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <TextBox x:Name="shopCity"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Margin="0 8 0 0" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1"
+                        Margin="68 0 0 0">
+                <StackPanel>
+                    <TextBlock Text="Country"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <TextBox x:Name="shopCountry"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Margin="0 8 0 0" />
+                </StackPanel>
+                <StackPanel Margin="0 24 0 0">
+                    <TextBlock Text="Phone"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <TextBox x:Name="shopPhone"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Margin="0 8 0 0"
+                             PreviewTextInput="NumericTextBox_PreviewTextInput"
+                             TextChanged="NumericTextBox_TextChanged" />
+                </StackPanel>
+                <StackPanel Margin="0 24 0 0">
+                    <TextBlock Text="Email"
+                               FontFamily="{StaticResource Roboto}"
+                               FontSize="20" />
+                    <TextBox x:Name="shopEmail"
+                             Style="{StaticResource CustomTextBoxStyle}"
+                             Margin="0 8 0 0" />
+                </StackPanel>
+                <StackPanel Margin="0 24 0 0"
+                            Orientation="Horizontal">
+                    <Button Background="Transparent"
+                            Padding="0"
+                            BorderThickness="0"
+                            Click="Submit_Click"
+                            Style="{StaticResource HoverButtonStyle}">
+
+                        <UC:RoundButtonUC Padding="24 12"
+                                          Background="{StaticResource blue}"
+                                          Content="Submit"
+                                          MinWidth="50"
+                                          Foreground="{StaticResource white}"
+                                          ButtonCornerRadius="6" />
+
+                    </Button>
+                    <Button Background="Transparent"
+                            Padding="0"
+                            Margin="12 0 0 0"
+                            BorderThickness="0"
+                            Click="Reset_Click"
+                            Style="{StaticResource HoverButtonStyle}">
+                        <UC:RoundButtonUC Padding="24 12"
+                                          Background="{StaticResource red}"
+                                          MinWidth="50"
+                                          Content="Reset"
+                                          Foreground="{StaticResource white}"
+                                          ButtonCornerRadius="6" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>

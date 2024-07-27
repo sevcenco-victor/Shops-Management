@@ -1,0 +1,91 @@
+﻿<Page x:Class="Shop.Presentation.Pages.ShopsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Shop.Presentation.UserControls"
+      xmlns:cards="clr-namespace:Shop.Presentation.UserControls.Cards"
+      mc:Ignorable="d"
+      Title="Shops">
+
+    <Grid x:Name="pageGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition  Height="*" />
+        </Grid.RowDefinitions>
+
+        <WrapPanel  Grid.Row="0"
+                    Margin="0 24 0 0 "
+                    HorizontalAlignment="Left">
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Padding="24 12"
+                    Margin="0 0 16 16"
+                    BorderThickness="1"
+                    Content="Add new Shop"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="AddNewShop_Click" />
+
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 16 16"
+                    Padding="24 12"
+                    BorderThickness="1"
+                    Content="Product Average Price"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="GetProductAvg_Click" />
+
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 16 16"
+                    Padding="24 12"
+                    BorderThickness="1"
+                    Content="Get Products by Country"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="ProductByCountry_Click" />
+
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 16 16"
+                    Padding="24 12"
+                    BorderThickness="1"
+                    Content="Child Products"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="ChildProducts_Click" />
+
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 16 16"
+                    Padding="24 12"
+                    BorderThickness="1"
+                    Content="Export Toys"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="ExportToys_Click" />
+
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 16 16"
+                    Padding="24 12"
+                    BorderThickness="1"
+                    Content="Top Sold Products"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="TopSoldProd_Click" />
+
+            <Button Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Padding="24 12"
+                    Margin="0 0 0 16"
+                    BorderThickness="1"
+                    Content="Find Product"
+                    Style="{StaticResource CustomButtonStyle}"
+                    Click="FindProduct_Click" />
+
+        </WrapPanel>
+        <WrapPanel x:Name="pageWrapper"
+                   Grid.Row="1"
+                   Margin="-24 38 0 0"
+                   Orientation="Horizontal">
+        </WrapPanel>
+
+    </Grid>
+</Page>
